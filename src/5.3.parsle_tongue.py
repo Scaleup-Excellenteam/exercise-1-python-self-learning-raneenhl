@@ -7,7 +7,6 @@ def parsle_tongue(filepath=None):
     Extracts secret messages from a binary file.
     Messages must be at least 5 lowercase letters and end with '!'
     """
-
     if filepath is None:
         filepath = os.path.join(
             os.path.dirname(__file__),
@@ -16,6 +15,7 @@ def parsle_tongue(filepath=None):
     # Searching pattern
     pattern = re.compile(rb'[a-z]{5,}!')
 
+    results = []
     with open(filepath, 'rb') as f:
         leftover = b''
         while True:
@@ -27,10 +27,12 @@ def parsle_tongue(filepath=None):
 
             # Find all matches
             for match in pattern.finditer(data):
-                yield match.group().decode('utf-8')
+                results.append(match.group().decode('utf-8').rstrip('!'))
 
             # Save the tail of the chunk to catch cut-off matches
             leftover = data[-10:]
+
+    return results
 
 
 if __name__ == '__main__':
