@@ -1,5 +1,6 @@
 import os
 
+
 def thats_the_way(folder_path):
     """
     Returns a list of file names in the given folder that starts with 'deep'.
@@ -8,8 +9,11 @@ def thats_the_way(folder_path):
     :return: List of files names that starts with 'deep'.
     """
 
-    # Get all items in the given folders, and return only those whose names start with "deep".
-    return [filename for filename in os.listdir(folder_path) if filename.startswith("deep")]
+    # Get all items in the given folders, and return only those whose names
+    # start with "deep".
+    return [filename for filename in os.listdir(
+        folder_path) if filename.startswith("deep")]
+
 
 # This block will only run if the script is executed directly.
 if __name__ == '__main__':

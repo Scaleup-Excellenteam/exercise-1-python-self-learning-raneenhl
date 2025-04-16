@@ -38,7 +38,7 @@ class PostOffice:
             'sender': sender,
             'title': title,
             'body': body,
-            'unread': True 
+            'unread': True
         }
 
         if urgent:
@@ -94,12 +94,22 @@ class PostOffice:
             if query_lower in msg['title'].lower() or query_lower in msg['body'].lower()
         ]
 
+
 if __name__ == '__main__':
     po = PostOffice(['Sam', 'Amira'])
 
     po.send_message('Sam', 'Amira', 'Hi Amira!', subject='Greeting')
-    po.send_message('Sam', 'Amira', 'Urgent: call me', subject='Emergency', urgent=True)
-    po.send_message('Sam', 'Amira', 'Don’t forget the meeting.', subject='Reminder')
+    po.send_message(
+        'Sam',
+        'Amira',
+        'Urgent: call me',
+        subject='Emergency',
+        urgent=True)
+    po.send_message(
+        'Sam',
+        'Amira',
+        'Don’t forget the meeting.',
+        subject='Reminder')
 
     print("Read 2 messages:")
     messages = po.read_inbox('Amira', 2)

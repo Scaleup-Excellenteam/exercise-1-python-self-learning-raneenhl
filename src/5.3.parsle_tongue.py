@@ -1,6 +1,7 @@
 import re
 import os
 
+
 def parsle_tongue(filepath=None):
     """
     Extracts secret messages from a binary file.
@@ -8,7 +9,9 @@ def parsle_tongue(filepath=None):
     """
 
     if filepath is None:
-        filepath = os.path.join(os.path.dirname(__file__), '../resources/logo.jpg')
+        filepath = os.path.join(
+            os.path.dirname(__file__),
+            '../resources/logo.jpg')
 
     # Searching pattern
     pattern = re.compile(rb'[a-z]{5,}!')

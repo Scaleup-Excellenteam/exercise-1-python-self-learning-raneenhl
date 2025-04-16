@@ -1,6 +1,7 @@
 import datetime
 import random
 
+
 def no_vinnigrete(date1, date2):
     """
     Returns a random date between two given dates (format: YYYY-MM-DD).
@@ -28,6 +29,7 @@ def no_vinnigrete(date1, date2):
         print("Ain't gettin' no vinaigrette today :(")
 
     return random_date
+
 
 if __name__ == '__main__':
     # Get input from user

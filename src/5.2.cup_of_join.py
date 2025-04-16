@@ -27,7 +27,8 @@ def cup_of_join(*lists, **kwargs):
 
 if __name__ == '__main__':
     # Example test cases
-    print(cup_of_join([1, 2], [8], [9, 5, 6], sep='@'))  # [1, 2, '@', 8, '@', 9, 5, 6]
+    # [1, 2, '@', 8, '@', 9, 5, 6]
+    print(cup_of_join([1, 2], [8], [9, 5, 6], sep='@'))
     print(cup_of_join([1, 2], [8], [9, 5, 6]))  # [1, 2, '-', 8, '-', 9, 5, 6]
     print(cup_of_join([1]))  # [1]
     print(cup_of_join())  # None

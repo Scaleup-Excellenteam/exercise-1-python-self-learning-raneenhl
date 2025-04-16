@@ -2,6 +2,7 @@ import string
 
 import string
 
+
 def long_cat_is_long(text):
     """
     Counts the lengths of alphabetic words in a given text, ignoring punctuation and numbers.

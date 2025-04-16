@@ -2,6 +2,7 @@ from itertools import zip_longest
 
 _FILL = object()  # single shared filler
 
+
 def interleave(*iterables):
     """
     Interleaves multiple iterables, continuing until the longest one is exhausted.
@@ -29,4 +30,5 @@ if __name__ == '__main__':
     result_gen = list(generator_interleave('abc', [1, 2, 3], ('!', '@', '#')))
 
     print(f'Result: {result}')  # ['a', 1, '!', 'b', 2, '@', 'c', 3, '#']
-    print(f'Generator Result: {result_gen}')  # ['a', 1, '!', 'b', 2, '@', 'c', 3, '#']
+    # ['a', 1, '!', 'b', 2, '@', 'c', 3, '#']
+    print(f'Generator Result: {result_gen}')

@@ -1,6 +1,7 @@
 import time
 
-def running_2000 (f, *args, **kwargs):
+
+def running_2000(f, *args, **kwargs):
     """
    Measures and returns the execution time of the given function f.
 
@@ -21,6 +22,7 @@ def running_2000 (f, *args, **kwargs):
 
     return end - start
 
+
 if __name__ == '__main__':
     example1 = running_2000(print, "Hello")
     print(example1)
@@ -30,6 +32,3 @@ if __name__ == '__main__':
 
     example3 = running_2000("Hi {name}".format, name="Bug")
     print(example3)
-
-
-

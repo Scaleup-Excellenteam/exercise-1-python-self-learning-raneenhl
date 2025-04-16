@@ -1,5 +1,6 @@
 from PIL import Image
 
+
 def remember_remember(image_path, threshold=10):
     """
     Decodes a hidden message from an image by scanning for near-black pixels in each column.
@@ -25,6 +26,7 @@ def remember_remember(image_path, threshold=10):
                 break  # Move to next column after finding the character
 
     return message
+
 
 # Example usage
 if __name__ == "__main__":

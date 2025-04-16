@@ -11,9 +11,12 @@ def group_by(func, iterable):
     for item in iterable:
         key = func(item)  # Apply the function to get the grouping key
         if key not in result:
-            result[key] = []  # Create a new list for this key if it doesn't exist
-        result[key].append(item)  # Add the current item to the corresponding list
+            # Create a new list for this key if it doesn't exist
+            result[key] = []
+        # Add the current item to the corresponding list
+        result[key].append(item)
     return result
+
 
 if __name__ == '__main__':
     # Example usage

@@ -1,5 +1,6 @@
 from functools import wraps
 
+
 def surprise(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
@@ -7,8 +8,11 @@ def surprise(func):
     return wrapper
 
 # Example usage:
+
+
 @surprise
 def greet():
     return "Hello!"
+
 
 print(greet())
